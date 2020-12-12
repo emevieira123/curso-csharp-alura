@@ -1,0 +1,16 @@
+D:\CursoCsharp\new-project\bin\Debug\net5.0\new-project.exe
+D:\CursoCsharp\new-project\bin\Debug\net5.0\new-project.deps.json
+D:\CursoCsharp\new-project\bin\Debug\net5.0\new-project.runtimeconfig.json
+D:\CursoCsharp\new-project\bin\Debug\net5.0\new-project.runtimeconfig.dev.json
+D:\CursoCsharp\new-project\bin\Debug\net5.0\new-project.dll
+D:\CursoCsharp\new-project\bin\Debug\net5.0\ref\new-project.dll
+D:\CursoCsharp\new-project\bin\Debug\net5.0\new-project.pdb
+D:\CursoCsharp\new-project\obj\Debug\net5.0\new-project.csprojAssemblyReference.cache
+D:\CursoCsharp\new-project\obj\Debug\net5.0\new-project.GeneratedMSBuildEditorConfig.editorconfig
+D:\CursoCsharp\new-project\obj\Debug\net5.0\new-project.AssemblyInfoInputs.cache
+D:\CursoCsharp\new-project\obj\Debug\net5.0\new-project.AssemblyInfo.cs
+D:\CursoCsharp\new-project\obj\Debug\net5.0\new-project.csproj.CoreCompileInputs.cache
+D:\CursoCsharp\new-project\obj\Debug\net5.0\new-project.dll
+D:\CursoCsharp\new-project\obj\Debug\net5.0\ref\new-project.dll
+D:\CursoCsharp\new-project\obj\Debug\net5.0\new-project.pdb
+D:\CursoCsharp\new-project\obj\Debug\net5.0\new-project.genruntimeconfig.cache
