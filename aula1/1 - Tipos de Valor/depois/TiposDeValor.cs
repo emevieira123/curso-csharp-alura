@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace certificacao_csharp_roteiro
+{
+    class TiposDeValor : IAulaItem
+    {
+        public void Executar()
+        {
+            // int idade;
+            // idade = 30;
+            // Console.WriteLine(idade);
+        }
+    }
+}
