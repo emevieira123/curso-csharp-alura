@@ -10,11 +10,11 @@ namespace certificacao_csharp_roteiro.antes
     {
         public void Executar()
         {
-            const int Seg = 0;
-            const int Ter = 1;
-            const int Qua = 2;
+            // const int Seg = 0;
+            // const int Ter = 1;
+            // const int Qua = 2;
 
-            DiasDaSemana primeiroDia = DiasDaSemana.Seg;
+            // DiasDaSemana primeiroDia = DiasDaSemana.Seg;
 
             DiasDeTrabalho diasDeTrabalho = DiasDeTrabalho.Ter | DiasDeTrabalho.Qui | DiasDeTrabalho.Sex;
 

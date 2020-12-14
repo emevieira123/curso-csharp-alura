@@ -10,7 +10,7 @@ namespace certificacao_csharp_roteiro.antes
     {
         public void Executar()
         {
-            int idade = 15;
+            // int idade = 15;
             // idade = 15.5;
 
             char resposta = 'S'; // System.Char
