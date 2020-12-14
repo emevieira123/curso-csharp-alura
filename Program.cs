@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace certificacao_csharp_roteiro.antes
+namespace certificacao_csharp_roteiro
 {
     class Program
     {
@@ -77,13 +77,13 @@ namespace certificacao_csharp_roteiro.antes
                 new MenuItem("Booleanos", typeof(Booleanos)),
                 new MenuItem("Estruturas", typeof(Estruturas)),
                 new MenuItem("Enumeracoes", typeof(Enumeracoes)),
-                //new MenuItem("Tipos de Refêrencia", typeof(TiposDeReferencia)),
-                //new MenuItem("Classes", typeof(Classes)),
-                //new MenuItem("Interfaces", typeof(Interfaces)),
-                //new MenuItem("Delegates", typeof(Delegates)),
-                //new MenuItem("Objetos", typeof(Objetos)),
-                //new MenuItem("Dinâmicos", typeof(Dinamicos)),
-                //new MenuItem("Strings", typeof(Strings)),
+                new MenuItem("Tipos de Refêrencia", typeof(TiposDeReferencia)),
+                new MenuItem("Classes", typeof(Classes)),
+                new MenuItem("Interfaces", typeof(Interfaces)),
+                new MenuItem("Delegates", typeof(Delegates)),
+                new MenuItem("Objetos", typeof(Objetos)),
+                new MenuItem("Dinâmicos", typeof(Dinamicos)),
+                new MenuItem("Strings", typeof(Strings)),
                 //new MenuItem("Metodos", typeof(Metodos)),
                 //new MenuItem("Parâmetros Nomeados", typeof(ParametrosNomeados)),
                 //new MenuItem("Parâmetros Opcionais", typeof(ParametrosOpcionais)),
