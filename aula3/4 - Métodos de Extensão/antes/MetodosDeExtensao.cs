@@ -12,7 +12,14 @@ namespace certificacao_csharp_roteiro.antes
         {
             Impressora impressora = new Impressora("Este é\r\no meu documento");
             impressora.ImprimirDocumento();
+            ImprimirDocumentoHTML(impressora.Documento);
+            impressora.ImprimirDocumentoHTML();
         }
+        void ImprimirDocumentoHTML(string documento)
+        {
+            System.Console.WriteLine($"<html><body>{documento}</body></html>");
+        }
+
     }
 
     class Impressora
@@ -28,6 +35,19 @@ namespace certificacao_csharp_roteiro.antes
         {
             Console.WriteLine();
             Console.WriteLine(Documento);
+        }
+
+        // public void ImprimirDocumentoHTML()
+        // {
+        //     System.Console.WriteLine($"<html><body>{Documento}</body></html>");
+        // }
+    }
+    
+   static class ImpressoraExtensions
+    {
+        public static void ImprimirDocumentoHTML(this Impressora impressora)
+        {
+            System.Console.WriteLine($"<html><body>{impressora.Documento}</body></html>");
         }
     }
 }
