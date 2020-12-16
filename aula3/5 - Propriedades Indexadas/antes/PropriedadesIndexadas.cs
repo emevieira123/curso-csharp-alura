@@ -11,8 +11,8 @@ namespace certificacao_csharp_roteiro.antes
         public void Executar()
         {
             var sala = new Sala();
-            sala.SetReserva("D01", new ClienteCinema("Maria de Souza"));
-            sala.SetReserva("D02", new ClienteCinema("José da Silva"));
+            sala["D01"] = new ClienteCinema("Maria de Souza");
+            sala["D02"] = new ClienteCinema("José da Silva");
 
             sala.ImprimirReservas();
         }
@@ -43,10 +43,22 @@ namespace certificacao_csharp_roteiro.antes
             return reservas[codigoAssento];
         }
 
-        public void SetReserva(string codigoAssento, ClienteCinema value)
+        public void SetReserva(string codigoAssento, ClienteCinema cliente)
         {
-            reservas[codigoAssento] = value;
+            reservas[codigoAssento] = cliente;
         }
+
+         public ClienteCinema this[string codigoAssento]
+         {
+             get
+             {
+                 return reservas[codigoAssento];
+             }
+             set
+             {
+                 reservas[codigoAssento] = value;
+             }
+         }
 
         public void ImprimirReservas()
         {
