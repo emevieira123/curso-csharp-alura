@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CursoCsharp\\projeto-alura\\projeto-alura.csproj",
+      "projectUniqueName": "D:\\CursoCsharp\\projeto-alura\\part1\\projeto-alura.csproj",
       "projectName": "projeto-alura",
-      "projectPath": "D:\\CursoCsharp\\projeto-alura\\projeto-alura.csproj",
+      "projectPath": "D:\\CursoCsharp\\projeto-alura\\part1\\projeto-alura.csproj",
       "packagesPath": "C:\\Users\\emers\\.nuget\\packages\\",
-      "outputPath": "D:\\CursoCsharp\\projeto-alura\\obj\\",
+      "outputPath": "D:\\CursoCsharp\\projeto-alura\\part1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\emers\\AppData\\Roaming\\NuGet\\NuGet.Config"
