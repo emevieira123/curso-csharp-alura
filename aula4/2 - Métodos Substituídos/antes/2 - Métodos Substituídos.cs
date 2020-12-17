@@ -14,6 +14,11 @@ namespace certificacao_csharp_roteiro.antes
             gato.Beber();
             gato.Comer();
             gato.Andar();
+
+            Gato gata = new Gato() { Nome = "Pantera" };
+            gata.Beber();
+            gata.Comer();
+            gata.Andar();
         }
     }
 
