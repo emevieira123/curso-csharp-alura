@@ -10,7 +10,7 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            int numero = 57;      // tipo de valor
+            //int numero = 57;      // tipo de valor
         }
     }
 }
