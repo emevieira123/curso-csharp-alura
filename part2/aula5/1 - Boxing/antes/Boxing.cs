@@ -11,6 +11,9 @@ namespace certificacao_csharp_roteiro.antes
         public void Executar()
         {
             int numero = 57;
+
+            object caixa = numero;
+            System.Console.WriteLine(string.Concat("Resposta", numero, true));
         }
     }
 }
