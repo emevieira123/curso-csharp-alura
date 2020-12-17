@@ -10,8 +10,8 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            string a = "bom dia";
-            string b = "b";
+            // string a = "bom dia";
+            // string b = "b";
         }
     }
 }
