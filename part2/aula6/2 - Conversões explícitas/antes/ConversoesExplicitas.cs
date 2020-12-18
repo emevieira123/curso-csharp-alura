@@ -10,7 +10,7 @@ namespace certificacao_csharp_roteiro.antes
     {
         public void Executar()
         {
-            double divida = 1_234_567_890.123;
+            //double divida = 1_234_567_890.123;
             //long copia = divida;
 
             double salario = 1_237.89;
