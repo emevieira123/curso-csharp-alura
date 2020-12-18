@@ -10,6 +10,37 @@ namespace certificacao_csharp_roteiro.antes
     {
         public void Executar()
         {
+            int inteiro = 2_123_456_789;
+            long inteiroLongo = inteiro;
+            System.Console.WriteLine(inteiroLongo);
+
+            // inteiro = inteiroLongo;
+
+            Gato gato =new Gato();
+            Animal animal = gato;
+            System.Console.WriteLine(animal.GetType());
+            //IAnimal ianimal = gato;
+            //System.Console.WriteLine(ianimal.GetType());
+            //gato = ianimal;
+
+
+            //Tabela de Conversões Numéricas Implicítas
+            //===========================================
+
+            //De        Para
+            //=======================================================
+            //sbyte     short, int, long, float, double ou decimal
+            //byte      short, ushort, int, uint, long, ulong, float, double ou decimal
+            //short     int, long, float, double ou decimal
+            //ushort    int, uint, long, ulong, float, double ou decimal
+            //int       long, float, double ou decimal
+            //uint      long, ulong, float, double ou decimal
+            //long      float, double ou decimal
+            //char      ushort, int, uint, long, ulong, float, double ou decimal
+            //float     double
+            //ulong     float, double ou decimal
+            //double    (nenhum)
+            //decimal   (nenhum)
         }
     }
 }
