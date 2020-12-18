@@ -12,7 +12,7 @@ namespace certificacao_csharp_roteiro.antes
         {
             Animal animal = new Animal();
             Gato gato = new Gato();
-            Cliente cliente = new Cliente("José da Silva", 30);
+            //Cliente cliente = new Cliente("José da Silva", 30);
         }
 
         public void Alimentar(object obj)
