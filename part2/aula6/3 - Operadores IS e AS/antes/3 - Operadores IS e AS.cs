@@ -23,6 +23,9 @@ namespace certificacao_csharp_roteiro.antes
 
         public void Alimentar(object obj)
         {
+            // Operador IS retorna um booleano
+            // Ja o Operador AS garante uma conversão mais segura
+            
             // Animal animal = obj as Animal;
 
             if (obj is Animal animal)
