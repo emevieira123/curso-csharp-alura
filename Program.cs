@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace certificacao_csharp_roteiro.antes
+namespace certificacao_csharp_roteiro
 {
     class Program
     {
@@ -98,11 +98,11 @@ namespace certificacao_csharp_roteiro.antes
                 new MenuItem("Operadores IS e AS", typeof(OperadoresISeAS)),
                 new MenuItem("Operadores de Conversão", typeof(OperadoresDeConversao)),
                 new MenuItem("Métodos Auxiliares de Conversão", typeof(MetodosAuxiliares)),
-                //new MenuItem("Usando Dynamic", typeof(UsandoDynamic)),
-                //new MenuItem("Conversões de Dynamic", typeof(ConversoesDeDynamic)),
-                //new MenuItem("Resolucão de Sobrecarga", typeof(ResolucaoSobrecarga)),
-                //new MenuItem("Usando ExpandObject", typeof(UsandoExpandObject)),
-                //new MenuItem("Interoperabilidade COM", typeof(InteropCOM))                
+                new MenuItem("Usando Dynamic", typeof(UsandoDynamic)),
+                new MenuItem("Conversões de Dynamic", typeof(ConversoesDeDynamic)),
+                new MenuItem("Resolucão de Sobrecarga", typeof(ResolucaoSobrecarga)),
+                new MenuItem("Usando ExpandObject", typeof(UsandoExpandObject)),
+                new MenuItem("Interoperabilidade COM", typeof(InteropCOM))
             };
         }
     }
