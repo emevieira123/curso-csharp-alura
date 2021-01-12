@@ -15,7 +15,22 @@ namespace certificacao_csharp_roteiro.antes
             string json = "{\"De\": \"Paulo Silveira\"," +
                 "\"Para\": \"Guilherme Silveira\"}";
 
-                JsonConvert.DeserializeObject<Mensagem>
+                dynamic mensagem = JsonConvert.DeserializeObject<ExpandoObject>(json);
+
+                mensagem.Texto = "Olá, " + mensagem.Para;
+
+                EnviarMensagem(mensagem);
+
+                mensagem.Inverter = new Action(() =>
+                {
+                    var aux = mensagem.De;
+                    mensagem.De = mensagem.Para;
+                    mensagem.Para = aux;
+                    mensagem.Text = "Olá, " + mensagem.Para;
+                });
+
+                mensagem.Inverter();
+                EnviarMensagem(mensagem);
         }
 
         private void EnviarMensagem(dynamic msg)
@@ -27,11 +42,5 @@ namespace certificacao_csharp_roteiro.antes
         }
     }
 
-    class Mensagem
-    {
-        public string De { get; set; }
-        public string Para { get; set; }
-        public string Texto { get; set; }
 
-    }
 }
