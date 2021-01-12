@@ -30,5 +30,5 @@ namespace certificacao_csharp_roteiro.antes
     }
 }
 
-///<image url="$(ProjectDir)img16.png" />
+//<image url="$(ProjectDir)img16.png" />
 
