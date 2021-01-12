@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CursoCsharp\\projeto-alura\\projeto-alura.csproj": {}
+    "/Users/emevieira/Documents/projetos-csharp/curso-csharp-alura/curso-csharp-alura/projeto-alura.csproj": {}
   },
   "projects": {
-    "D:\\CursoCsharp\\projeto-alura\\projeto-alura.csproj": {
+    "/Users/emevieira/Documents/projetos-csharp/curso-csharp-alura/curso-csharp-alura/projeto-alura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CursoCsharp\\projeto-alura\\projeto-alura.csproj",
+        "projectUniqueName": "/Users/emevieira/Documents/projetos-csharp/curso-csharp-alura/curso-csharp-alura/projeto-alura.csproj",
         "projectName": "projeto-alura",
-        "projectPath": "D:\\CursoCsharp\\projeto-alura\\projeto-alura.csproj",
-        "packagesPath": "C:\\Users\\emers\\.nuget\\packages\\",
-        "outputPath": "D:\\CursoCsharp\\projeto-alura\\obj\\",
+        "projectPath": "/Users/emevieira/Documents/projetos-csharp/curso-csharp-alura/curso-csharp-alura/projeto-alura.csproj",
+        "packagesPath": "/Users/emevieira/.nuget/packages/",
+        "outputPath": "/Users/emevieira/Documents/projetos-csharp/curso-csharp-alura/curso-csharp-alura/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\emers\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/emevieira/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }

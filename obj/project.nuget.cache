@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "18BHcIUA3lBH47qhmR5CRQNHtZkuQNxls1P52BwEZQzRX/1YVv4Ns7q6mboINepIiAmnLzPV3T5RGgF2DtSkbQ==",
+  "dgSpecHash": "W6XwXQH1w4DPXajL2jX80Eqvdnu3nsvKPzNyC4ApdzIWbn2BjpleJAd9gwA9pc9z9UIQx4tLDOdOD7R/EYcLWA==",
   "success": true,
-  "projectFilePath": "D:\\CursoCsharp\\projeto-alura\\projeto-alura.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/emevieira/Documents/projetos-csharp/curso-csharp-alura/curso-csharp-alura/projeto-alura.csproj",
+  "expectedPackageFiles": [
+    "/Users/emevieira/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
