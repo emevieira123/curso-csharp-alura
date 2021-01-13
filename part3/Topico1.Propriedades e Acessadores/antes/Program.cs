@@ -20,6 +20,10 @@ namespace Topico1
             //funcionario.Salario = -1200;
             funcionario.Salario = 1200;
             System.Console.WriteLine(funcionario.Salario);
+
+            Conta conta = new Conta();
+            conta.Saldo = 1000;
+            System.Console.WriteLine(conta.Saldo);
         }
     }
 
