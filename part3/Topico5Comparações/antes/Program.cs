@@ -26,10 +26,38 @@ namespace Topico5
 
             System.Console.WriteLine(aluno1.Equals(aluno2));
             System.Console.WriteLine(aluno1.Equals(aluno3));
+
+            Aluno aluno4 = new Aluno
+            {
+                Nome = "ANDRÉ DOS SANTOS",
+                DataNascimento = new DateTime(1970, 1, 1)
+            };
+
+            Aluno aluno5 = new Aluno
+            {
+                Nome = "Ana de Souza",
+                DataNascimento = new DateTime(1990, 1, 1)
+            };
+
+            List<Aluno> alunos = new List<Aluno>
+            {
+                aluno1,
+                aluno2,
+                aluno3,
+                aluno4,
+                aluno5
+            };
+
+            alunos.Sort();
+
+            foreach (var aluno in alunos)
+            {
+                System.Console.WriteLine(aluno);
+            }
         }
     }
 
-    class Aluno
+    class Aluno : IComparable
     {
         public string Nome { get; set; }
         public DateTime DataNascimento { get; set; }
@@ -48,6 +76,31 @@ namespace Topico5
             }
             return this.Nome.Equals(outro.Nome, StringComparison.CurrentCultureIgnoreCase)
                 && this.DataNascimento.Equals(outro.DataNascimento);
+        }
+
+        public int CompareTo(object obj)
+        {
+            //Se retornar = 0, objetos são iguais
+            //se retornar > 0, objeto atual vem depois
+            //Se retornar < 0, objeto atula vem antes
+
+            if(obj == null)
+            {
+                return 1;
+            }
+
+            Aluno outro = obj as Aluno;
+            if(outro == null)
+            {
+                throw new ArgumentException("Objeto não é um aluno");
+            }
+
+            int resultado = this.DataNascimento.CompareTo(outro.DataNascimento);
+            if(resultado == 0)
+            {
+                resultado = this.Nome.CompareTo(outro.Nome);
+            }
+            return resultado;
         }
     }
 }
