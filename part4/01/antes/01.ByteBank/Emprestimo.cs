@@ -36,6 +36,10 @@ namespace _01.ByteBank
                 this.codigoContrato = codigoContrato;
                 Console.WriteLine($"Novo empréstimo com código: {codigoContrato}");
             }
+            else
+            {
+                //Lançar uma exceção
+            }
 
         }
 
@@ -53,8 +57,18 @@ namespace _01.ByteBank
                 //lançar um evento de "prazo estourado"
                 //senão, definir o novo prazo.
 
-                prazo = value;
-                Console.WriteLine($"novo prazo: {prazo}");
+                if(value <= PRAZO_MAXIMO_PAGAMENTO_ANOS)
+                {
+                    prazo = value;
+                    Console.WriteLine($"novo prazo: {prazo}");
+                }
+                else
+                {
+                    if(OnPrazoMaximoEstourado != null)
+                    {
+                        OnPrazoMaximoEstourado(this, new EventArgs());
+                    }                    
+                }                
             }
         }
 
