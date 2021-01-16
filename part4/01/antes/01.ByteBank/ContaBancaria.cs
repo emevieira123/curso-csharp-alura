@@ -14,8 +14,13 @@ namespace _01.ByteBank
 
         public void SacarDinheiro(decimal quantia)
         {
+            if(saldo < quantia)
+            {                
+                System.Console.WriteLine("Saldo insuficiente");
+                return;
+            }
             Sacar(quantia);
-            ImprimirComprovante();
+            ImprimirComprovante();            
             ///< image url="$(ProjectDir)\img1.png"/>
         }
 
