@@ -17,6 +17,9 @@ namespace _01.ByteBank
             emprestimo.OnPrazoMaximoEstourado += Emprestimo_OnPrazoMaximoEstourado;
             emprestimo.Prazo = 3;
             emprestimo.Prazo = 7;
+            emprestimo.CalcularJuros(6000, 3);
+            emprestimo.CalcularJuros(8500, 6);
+            emprestimo.CalcularJuros(11500, 4);
         }
 
         private static void Emprestimo_OnPrazoMaximoEstourado(object source, EventArgs)
