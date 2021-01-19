@@ -15,16 +15,16 @@ namespace _03.ByteBank
                 Console.WriteLine("id,nome,sobrenome,email,valor,status");
 
                 //lê primeira linha de dados
-                string linha = leitor.ReadLine();
+                string linha;
                 //verifica fim de arquivo
-                if (linha != null)
+                while ((linha = leitor.ReadLine()) != null)
                 {
                     //imprime a linha do cliente
                     var campos = linha.Split(',');
                     Console.WriteLine(
                         $"{int.Parse(campos[0])}, {campos[1]}" +
                         $", {campos[2]}, {campos[3]}" +
-                        $", {decimal.Parse(campos[4])}, {campos[5]}");
+                        $", {decimal.Parse(campos[4])}, {campos[5]}");                    
                 }
             }
         }
