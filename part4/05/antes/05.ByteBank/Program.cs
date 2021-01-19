@@ -21,6 +21,15 @@ namespace _05.ByteBank
             System.Console.WriteLine(conta1);
             System.Console.WriteLine(conta2);
 
+            try
+            {
+                transferencia.Efetuar(conta1, null, 50);                
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine("Aconteceu um problema na transferencia");
+            }
+
             Console.ReadKey();
         }
     }
