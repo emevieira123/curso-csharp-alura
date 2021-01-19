@@ -15,6 +15,9 @@ namespace _03.ByteBank
             GetFatorial(0);
 
             RelatorioClientes.ImprimirListagemClientes();
+
+            MenuCaixaEletronico menu = new MenuCaixaEletronico();
+            menu.Executar();
         }
 
         private static int GetFatorial(int numero)
