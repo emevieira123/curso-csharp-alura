@@ -10,6 +10,17 @@ namespace _05.ByteBank
     {
         static void Main(string[] args)
         {
+            ContaCorrente conta1 = new ContaCorrente(1, 100);
+            ContaCorrente conta2 = new ContaCorrente(4, 50);
+            System.Console.WriteLine(conta1);
+            System.Console.WriteLine(conta2);
+
+            ITransferenciaBancaria transferencia = new TransferenciaBancaria();
+            transferencia.Efetuar(conta1, conta2, 30);
+
+            System.Console.WriteLine(conta1);
+            System.Console.WriteLine(conta2);
+
             Console.ReadKey();
         }
     }
