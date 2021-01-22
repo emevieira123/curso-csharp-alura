@@ -23,11 +23,12 @@ namespace _05.ByteBank
 
             try
             {
-                transferencia.Efetuar(conta1, null, 50);                
+                transferencia.Efetuar(conta1, conta2, -75);                
             }
             catch (Exception ex)
             {
                 System.Console.WriteLine("Aconteceu um problema na transferencia");
+                Logger.LogErro(ex.ToString());
             }
 
             Console.ReadKey();
@@ -83,6 +84,19 @@ namespace _05.ByteBank
         public void Efetuar(ContaCorrente contaDebito, ContaCorrente contaCredito
             , decimal valor)
         {
+            if(contaDebito == null)
+            {
+                throw new ArgumentMullException("contaDebito");
+            }
+            if(contaCredito == null)
+            {
+                throw new ArgumentMullException("contaCredito");
+            }
+            if(valor <= 0)
+            {
+                throw new ArgumentOutOfRangeException("valor");
+            }
+
             Logger.LogInfo("Entrando do método Efetuar.");
 
             contaDebito.Debitar(valor);
