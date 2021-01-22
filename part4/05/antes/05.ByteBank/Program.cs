@@ -141,9 +141,16 @@ namespace _05.ByteBank
                 AtualizarSaldo(contaCredito);
                 Logger.LogInfo("Transferência realizada com sucesso.");
             }
-            catch(Exception ex)
+            catch(SqlException ex) //Excecoes especificas primeiro
+            {
+                transaction.Rollback(); // Defaz a transacao
+                Logger.LogErro(ex.ToString());
+                throw;
+            }
+            catch(Exception ex) //Excecoes mais genericas depois 
             {
                 Logger.LogErro(ex.ToString());
+                throw;
             }
             finally
             {
