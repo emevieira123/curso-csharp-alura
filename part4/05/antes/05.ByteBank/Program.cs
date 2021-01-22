@@ -15,7 +15,7 @@ namespace _05.ByteBank
             System.Console.WriteLine(conta1);
             System.Console.WriteLine(conta2);
 
-            ITransferenciaBancaria transferencia = new TransferenciaBancaria();
+            ITransferenciaBancaria transferencia = new TransferenciaBancaria_BD();
             transferencia.Efetuar(conta1, conta2, 30);
 
             System.Console.WriteLine(conta1);
@@ -132,10 +132,27 @@ namespace _05.ByteBank
             SqlCommand comandoTaxa = GetTaxaTransferenciaCommand
                 (contaCredito.Id, TAXA_TRANSFERENCIA);
 
-            comandoTaxa.ExecuteNonQuery();
-            comandoTransferencia.ExecuteNonQuery();
-            transaction.Commit();
-            Logger.LogInfo("Transferência realizada com sucesso.");
+            try
+            {
+                comandoTaxa.ExecuteNonQuery();
+                comandoTransferencia.ExecuteNonQuery();
+                transaction.Commit();
+                AtualizarSaldo(contaDebito);
+                AtualizarSaldo(contaCredito);
+                Logger.LogInfo("Transferência realizada com sucesso.");
+            }
+            catch(Exception ex)
+            {
+                Logger.LogErro(ex.ToString());
+            }
+            finally
+            {
+                comandoTransferencia.Dispose();
+                comandoTaxa.Dispose();
+                transaction.Dispose();
+                connection.Dispose();
+            }
+            
 
             Logger.LogInfo("Saindo do método Efetuar.");
         }
