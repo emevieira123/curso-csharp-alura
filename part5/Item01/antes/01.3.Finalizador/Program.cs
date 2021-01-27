@@ -7,10 +7,12 @@ namespace _01._3.Finalizador_antes
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 1000000; i++)
             {
                 Livro livro = new Livro();
             }
+
+            GC.Collect();
 
             Console.ReadKey();
         }
@@ -28,7 +30,13 @@ namespace _01._3.Finalizador_antes
         {
             UltimoId++;
             Id = UltimoId;
-            Trace.WriteLine("Livro " + Id + " está sendo criado");
+            //Trace.WriteLine("Livro " + Id + " está sendo criado");
+        }
+        ˜Livro()
+        {
+            //Liberar somente os recursos não-gerenciados
+
+            Trace.WriteLine("Livro" + Id + " está sendo finalizado");
         }
     }
 }
