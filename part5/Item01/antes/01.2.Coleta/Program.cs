@@ -9,7 +9,8 @@ namespace _01._02.TiposDeReferencia
         {
             await Task.Delay(3000); //aguarda 3 segundos
 
-            GerarTiposValor();
+            // GerarTiposValor();
+            GerarTiposReferencia();
 
             Console.ReadKey();
         }
