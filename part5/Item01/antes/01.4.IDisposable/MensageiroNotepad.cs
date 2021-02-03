@@ -5,9 +5,10 @@ using System.Runtime.InteropServices;
 
 namespace _01._4.IDisposable_Finalizador
 {
-    class MensageiroNotepad
+    class MensageiroNotepad : IDisposable_Finalizador
     {
         IntPtr ponteiroNotepad;
+        StreamWriter escritor = new StreamWriter("mensagens.txt");
 
         [DllImport("user32.dll", EntryPoint = "FindWindowEx")]
         public static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
@@ -16,6 +17,9 @@ namespace _01._4.IDisposable_Finalizador
 
         public void EnviarMensagem(string mensagem)
         {
+            escritor.WriteLine(mensagem);
+            escritor.Flush();
+
             //Obtém os processos do Windows que estão rodando instâncias do Notepad
             Process[] notepads = Process.GetProcessesByName("notepad");
             if (notepads.Length == 0) return;
