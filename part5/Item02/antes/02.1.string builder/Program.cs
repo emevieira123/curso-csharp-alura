@@ -11,12 +11,12 @@ namespace _02._1.string_builder
     {
         static void Main(string[] args)
         {
-            string materias = string.Empty;
-            materias += "Português";
+            StringBuilder materias = new StringBuilder();
+            materias.Append("Português");
             Console.WriteLine(materias);
-            materias += ", Matemática";
+            materias.Append(", Matemática");
             Console.WriteLine(materias);
-            materias += ", Geografia";
+            materias.Append(", Geografia");
             Console.WriteLine(materias);
 
             Console.ReadKey();
