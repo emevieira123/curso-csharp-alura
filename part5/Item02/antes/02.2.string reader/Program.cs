@@ -13,9 +13,18 @@ namespace _02._2.string_reader
             //linha a linha.
             //2) Cada Linha deve começar com um caracter "•" e um espaço
 
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             string ingredientes = GetIngredientes();
 
-            Console.WriteLine(ingredientes);
+            using (StringReader stringReader = new StringReader(ingredientes))
+            {            
+                string line;
+                while ((line = stringReader.ReadLine()) != null)
+                {
+                    System.Console.WriteLine("• " + line);
+                }
+            }
 
             Console.ReadKey();
         }
