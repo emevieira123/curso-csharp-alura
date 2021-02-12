@@ -66,7 +66,7 @@ namespace _02._4.pesquisa
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            bool comecaCom = lblDocumento.Text.StartsWith(textoBusca);
+            bool comecaCom = lblDocumento.Text.StartsWith(textoBusca, StringComparison.InvariantCultureIgnoreCase);
 
             if (comecaCom)
             {
@@ -82,7 +82,7 @@ namespace _02._4.pesquisa
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            var terminaCom = lblDocumento.TextEndsWith(textoBusca);
+            var terminaCom = lblDocumento.TextEndsWith(textoBusca.StringComparison.InvariantCultureIgnoreCase);
 
             if (terminaCom)
             {
@@ -99,6 +99,7 @@ namespace _02._4.pesquisa
             var textoBusca = parametros.FirstOrDefault();
 
             //indiceDe = ???; //implementar busca
+            indiceDe = lblDocumento.Text.IndexOf(textoBusca);
 
             if (indiceDe == -1)
             {
@@ -115,6 +116,7 @@ namespace _02._4.pesquisa
             var textoBusca = parametros.FirstOrDefault();
 
             //indiceDe = ???; //implementar busca
+            
 
             if (indiceDe == -1)
             {
@@ -134,7 +136,7 @@ namespace _02._4.pesquisa
             //txtPesquisa.SelectionStart = ???
             //txtPesquisa.SelectionLength = ???
 
-            string trecho = ""; //implementar busca
+            string trecho = lblDocumento.Text.Substring(indiceInicial, comprimento);
 
             return "O trecho selecionado é: " + trecho;
         }
@@ -144,7 +146,7 @@ namespace _02._4.pesquisa
             var antigoTexto = parametros[0];
             var novoTexto = parametros[1];
 
-            //txtPesquisa.Text = ??? implementar substituição
+            lblDocumento.Text = lblDocumento.Text.Replace(antigoTexto, novoTexto);
 
             return "Trecho substituído com sucesso.";
         }
