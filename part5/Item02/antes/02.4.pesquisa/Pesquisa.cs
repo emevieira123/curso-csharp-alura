@@ -50,7 +50,7 @@ namespace _02._4.pesquisa
             //txtPesquisa: caixa de texto do Windows Forms
             var textoBusca = parametros.FirstOrDefault();
 
-            bool contem = false; //implementar busca
+            bool contem = lblDocumento.Text.ToUpper().Contains(textoBusca.ToUpper());
 
             if (contem)
             {
@@ -66,7 +66,7 @@ namespace _02._4.pesquisa
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            bool comecaCom = false; //implementar busca
+            bool comecaCom = lblDocumento.Text.StartsWith(textoBusca);
 
             if (comecaCom)
             {
@@ -82,7 +82,7 @@ namespace _02._4.pesquisa
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            var terminaCom = false; //implementar busca
+            var terminaCom = lblDocumento.TextEndsWith(textoBusca);
 
             if (terminaCom)
             {
