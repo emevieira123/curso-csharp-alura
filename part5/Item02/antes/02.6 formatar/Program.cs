@@ -14,11 +14,11 @@ namespace _02._6_formatar
             {
                 Empresa = "Alura Serviços Hidráulicos Ltda.",
                 Funcionario = "Mario Mario",
-                Inicio = new DateTime(2019, 1, 1),
+                Inicio = new DateTime(2021, 1, 1),
                 Cargo = "encanador",
                 Salario = 3108.45,
-                InicioJornada = new DateTime(2018, 1, 10, 9, 0, 0),
-                FimJornada = new DateTime(2018, 1, 10, 18, 0, 0)
+                InicioJornada = new DateTime(2021, 2, 16, 9, 0, 0),
+                FimJornada = new DateTime(2021, 2, 16, 18, 0, 0)
             };
 
             string documento = 
@@ -26,18 +26,18 @@ namespace _02._6_formatar
                 @"                                             CONTRATO INDIVIDUAL DE TRABALHO TEMPORÁRIO
 
 
-            EMPREGADOR: " + contrato.Empresa + @"
+            EMPREGADOR: { 0 }
 
-            EMPREGADO: " + contrato.Funcionario + @"
+            EMPREGADO: { 1 }
 
 
 Pelo presente instrumento particular de contrato individual de trabalho, fica justo e contratado o seguinte:
  
-Cláusula 1ª - O EMPREGADO prestará ao EMPREGADOR, a partir de " + contrato.Inicio + @" e assinatura deste instrumento, seus trabalhos exercendo a função de " + contrato.Cargo + @", prestando pessoalmente o labor diário no período compreendido entre " + contrato.InicioJornada + @" e " + contrato.FimJornada + @", e intervalo de 1 hora para almoço;
+Cláusula 1ª - O EMPREGADO prestará ao EMPREGADOR, a partir de { 2 } e assinatura deste instrumento, seus trabalhos exercendo a função de { 3 }, prestando pessoalmente o labor diário no período compreendido entre { 4}  e { 5 }, e intervalo de 1 hora para almoço;
 
             Cláusula 2ª - Não haverá expediente nos dias de sábado, sendo prestado a compensação de horário semanal;
 
-            Cláusula 3ª - O EMPREGADOR pagará mensalmente, ao EMPREGADO, a título de salário a importância de " + contrato.Salario + @", com os descontos previstos por lei;
+            Cláusula 3ª - O EMPREGADOR pagará mensalmente, ao EMPREGADO, a título de salário a importância de { 6 }, com os descontos previstos por lei;
 
             Cláusula 4ª - Estará o EMPREGADO subordinado a legislação vigente no que diz respeito aos descontos de faltas e demais sanções disciplinares contidas na Consolidação das Leis do Trabalho.
 
@@ -49,25 +49,33 @@ Cláusula 1ª - O EMPREGADO prestará ao EMPREGADOR, a partir de " + contrato.In
 Como prova do acordado, assinam instrumento, afirmado e respeitando seu teor por inteiro, e firmam conjuntamente a este duas testemunhas, comprovando as razões descritas.
 
 
-São Paulo, " + DateTime.Today + @"
+São Paulo, { 7 }
 
 
 
 _______________________________________________________
-" + contrato.Empresa + @"
+{ 0 }
 
 
 _______________________________________________________
-" + contrato.Funcionario + @"
-
-
-_______________________________________________________
-(Nome, R.G, Testemunha)
+{ 1 }
 
 
 _______________________________________________________
 (Nome, R.G, Testemunha)
- ");
+
+
+_______________________________________________________
+(Nome, R.G, Testemunha)",
+contrato.Empresa,
+contrato.Funcionario,
+contrato.Inicio,
+contrato.Cargo,
+contrato.InicioJornada,
+contrato.FimJornada,
+contrato.Salario,
+DateTime.Today);
+
             Console.WriteLine(documento);
             Console.ReadKey();
         }
