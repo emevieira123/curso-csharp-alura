@@ -33,11 +33,11 @@ namespace _02._6_formatar
 
 Pelo presente instrumento particular de contrato individual de trabalho, fica justo e contratado o seguinte:
  
-Cláusula 1ª - O EMPREGADO prestará ao EMPREGADOR, a partir de { 2 } e assinatura deste instrumento, seus trabalhos exercendo a função de { 3 }, prestando pessoalmente o labor diário no período compreendido entre { 4}  e { 5 }, e intervalo de 1 hora para almoço;
+Cláusula 1ª - O EMPREGADO prestará ao EMPREGADOR, a partir de { 2:d } e assinatura deste instrumento, seus trabalhos exercendo a função de { 3 }, prestando pessoalmente o labor diário no período compreendido entre { 4:t }  e { 5:t }, e intervalo de 1 hora para almoço;
 
             Cláusula 2ª - Não haverá expediente nos dias de sábado, sendo prestado a compensação de horário semanal;
 
-            Cláusula 3ª - O EMPREGADOR pagará mensalmente, ao EMPREGADO, a título de salário a importância de { 6 }, com os descontos previstos por lei;
+            Cláusula 3ª - O EMPREGADOR pagará mensalmente, ao EMPREGADO, a título de salário a importância de { 6:C }, com os descontos previstos por lei;
 
             Cláusula 4ª - Estará o EMPREGADO subordinado a legislação vigente no que diz respeito aos descontos de faltas e demais sanções disciplinares contidas na Consolidação das Leis do Trabalho.
 
@@ -49,7 +49,7 @@ Cláusula 1ª - O EMPREGADO prestará ao EMPREGADOR, a partir de { 2 } e assinat
 Como prova do acordado, assinam instrumento, afirmado e respeitando seu teor por inteiro, e firmam conjuntamente a este duas testemunhas, comprovando as razões descritas.
 
 
-São Paulo, { 7 }
+São Paulo, { 7:D }
 
 
 
