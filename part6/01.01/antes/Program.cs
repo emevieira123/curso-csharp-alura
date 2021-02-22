@@ -36,7 +36,13 @@ namespace _01._03
             {
                 xmlSerializer.Serialize(stringWriter, dados);
                 System.Console.WriteLine(stringWriter);
-            }            
+            } 
+
+            using (var fileStream =  new FileStream("Loja.xml", FileMode.Create, FileAccess.Write))
+            {
+                xmlSerializer.Serialize(fileStream, dados);
+            }
+                      
 
             //AQUI VEM O CÓDIGO DO SEGUNDO SISTEMA
 
