@@ -29,7 +29,14 @@ namespace _01._03
             ///<image url="$(ProjectDir)\img01.png"/>
 
             //INÍCIO DO CÓDIGO DO PRIMEIRO SISTEMA
+            var dados = ObterDados();
+            var xmlSerializer = new XmlSerializer(typeof(LojaDeFilmes));
 
+            using (var stringWriter = new StringWriter())
+            {
+                xmlSerializer.Serialize(stringWriter, dados);
+                System.Console.WriteLine(stringWriter);
+            }            
 
             //AQUI VEM O CÓDIGO DO SEGUNDO SISTEMA
 
