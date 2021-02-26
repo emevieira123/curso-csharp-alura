@@ -38,22 +38,22 @@ namespace _01._03
                 System.Console.WriteLine(stringWriter);
             } 
 
-            using (var fileStream =  new FileStream("Loja.xml", FileMode.Create, FileAccess.Write))
+            using (var fileStream =  new FileStream("MovieStore.xml", FileMode.Create, FileAccess.Write))
             {
                 xmlSerializer.Serialize(fileStream, dados);
             }
                       
 
             //AQUI VEM O CÓDIGO DO SEGUNDO SISTEMA
-            var xmlSerializer2 = new XmlSerializer(typeof(LojaDeFilmes));
-            LojaDeFilmes lojaDeFilmes;
-            using (var fileStream = new FileStream("Loja.xml", FileMode.Open, FileAccess.Read)) 
+            var xmlSerializer2 = new XmlSerializer(typeof(MovieStore));
+            MovieStore movieStore;
+            using (var fileStream = new FileStream("MovieStore.xml", FileMode.Open, FileAccess.Read)) 
             {
-                lojaDeFilmes = (LojaDeFilmes)xmlSerializer2.Deserialize(fileStream);
+                movieStore = (MovieStore)xmlSerializer2.Deserialize(fileStream);
             }
-            foreach (var filme in lojaDeFilmes.Filmes)
+            foreach (var movie in movieStore.Movies)
             {
-                System.Console.WriteLine(filme.Titulo);
+                System.Console.WriteLine(movie.Title);
             }
             
 
