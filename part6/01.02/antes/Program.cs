@@ -6,17 +6,27 @@ using System.Threading.Tasks;
 
 namespace _01._02
 {
-    ///<image url="$(ProjectDir)/img01.png"/>
-    ///<image url="$(ProjectDir)/img02.png"/>
+    //<image url="$(ProjectDir)/img01.png"/>
+    //<image url="$(ProjectDir)/img02.png"/>
 
     class Program
     {
         static void Main(string[] args)
         {
             //SERIALIZAÇÃO JSON
+            var loja = ObterDados();           
 
             //1) usando JavaScriptSerializer
-            Console.WriteLine("1) usando JavaScriptSerializer");
+            //Console.WriteLine("1) usando JavaScriptSerializer");
+
+            var javascriptSerializer = new JavaScriptSerializer();
+            var json = javascriptSerializer.Serialize(loja);
+            System.Console.WriteLine(json);
+
+            using(var streamWriter = new StreamWriter("Loja.json")) 
+            {
+                streamWriter.Write(json);
+            }
 
             //2) usando Json.NET (NewtonSoft)
             //Console.WriteLine("2) usando Json.NET (NewtonSoft)");
