@@ -28,6 +28,12 @@ namespace _01._02
                 streamWriter.Write(json);
             }
 
+            var copiaDaLoja = (LojaDeFilmes)javascriptSerializer.Deserialize(json, typeof(LojaDeFilmes))
+            foreach (var filme in copiaDaLoja)
+            {
+                System.Console.WriteLine(filme.Titulo);
+            }
+
             //2) usando Json.NET (NewtonSoft)
             //Console.WriteLine("2) usando Json.NET (NewtonSoft)");
 
