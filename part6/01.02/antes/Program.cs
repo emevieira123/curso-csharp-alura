@@ -36,6 +36,21 @@ namespace _01._02
 
             //2) usando Json.NET (NewtonSoft)
             //Console.WriteLine("2) usando Json.NET (NewtonSoft)");
+            json = JsonConvert.SerializeObject(loja);
+            System.Console.WriteLine(json);
+
+            using(var streamWriter = new StreamWriter("Loja.json")) 
+            {
+                streamWriter.Write(json);
+            }
+
+            // copiaDaLoja = (LojaDeFilmes)JsonConvert.DeserializeObject(json);
+            copiaDaLoja = JsonConvert.DeserializeObject<LojaDeFilmes>(json);
+
+            foreach (var filme in copiaDaLoja.Filmes)
+            {
+                System.Console.WriteLine(filme.Titulo);
+            }
 
             Console.ReadKey();
         }
