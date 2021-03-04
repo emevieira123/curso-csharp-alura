@@ -52,6 +52,13 @@ namespace _01._02
                 System.Console.WriteLine(filme.Titulo);
             }
 
+            MovieStore movieStore =  JsonConvert.DeserializeObject<MovieStore>(json);
+
+            foreach (var movie in movieStore.Movies)
+            {
+                System.Console.WriteLine(movie.Titulo);
+            }
+
             Console.ReadKey();
         }
 
