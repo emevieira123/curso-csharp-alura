@@ -10,6 +10,28 @@ namespace _01._04
     {
         static void Main(string[] args)
         {
+            LojaDeFilmes loja = ObterDados();
+
+            var serializer = new DataContractSerializer(typeof(LojaDeFilmes));
+            
+            using (var fileStream = new FileStream("Loja.xml", FileMode.Create, FileAcess.Write))
+            {
+                serializer.WriteObject(fileStream, loja);
+            }
+
+            LojaDeFilmes copiaDaLoja;
+            using(var fileStream = new FileStream("Loja.xml", FileMode.Open, FileAcess.Read))
+            {
+                copiaDaLoja = (LojaDeFilmes)serializer.ReadObject(fileStream);
+            }
+
+            foreach (var filme in copiaDaLoja.Filmes)
+            {
+                System.Console.WriteLine(filme.Titulo);
+            }
+
+            Console.ReadKey();
+            
         }
 
         private static LojaDeFilmes ObterDados()
