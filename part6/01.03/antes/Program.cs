@@ -10,13 +10,22 @@ using System.Threading.Tasks;
 
 namespace _01._03
 {
-    ///<image url="$(ProjectDir)/img01.png"/>
-    ///<image url="$(ProjectDir)/img02.png"/>
+    //<image url="$(ProjectDir)/img01.png"/>
+    //<image url="$(ProjectDir)/img02.png"/>
 
     class Program
     {
         static void Main(string[] args)
         {
+            var loja = ObterDados();
+
+            var binaryFormatter = new BinaryFormatter();
+
+            using (var fileStream = new FileStream("Loja.bin", FileMode.Create, FileAcess.Write))
+            {
+                binaryFormatter.Serialize(fileStream);
+            }
+            
         }
 
         private static LojaDeFilmes ObterDados()
