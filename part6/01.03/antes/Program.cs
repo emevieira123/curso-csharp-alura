@@ -26,6 +26,19 @@ namespace _01._03
                 binaryFormatter.Serialize(fileStream);
             }
             
+            LojaDeFilmes copiaDaLoja;
+            using (var fileStream = new FileStream("Loja.bin", FileMode.Open, FileAcess.Read))
+            {
+                copiaDaLoja = (LojaDeFilmes)binaryFormatter.Deserialize(fileStream);
+            }
+            
+            foreach (var filme in copiaDaLoja.Filmes)
+            {
+                System.Console.WriteLine(filme.Titulo);
+            }
+
+            Console.ReadKey();
+            
         }
 
         private static LojaDeFilmes ObterDados()
