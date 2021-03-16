@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 
 namespace _01._05
 {
+    [Serializable]
     public class LojaDeFilmes
     {
         public List<Diretor> Diretores = new List<Diretor>();
@@ -13,12 +14,21 @@ namespace _01._05
         }
     }
 
-    public class Diretor
+    [Serializable]
+    public class Diretor : ISerializable
     {
         public string Nome { get; set; }
         public int NumeroFilmes;
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue(nameof(Nome), Nome);
+            info.AddValue(nameof(NumeroFilmes), NumeroFilmes);
+            info.AddValue("Resumo", $"Nome: {Nome}, Número de Filmes: {NumeroFilmes}");
+        }
     }
 
+    [Serializable]
     public class Filme
     {
         public Diretor Diretor { get; set; }
