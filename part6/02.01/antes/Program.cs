@@ -29,17 +29,34 @@ namespace _02._01
             string[] empresas = {alura, caelum, casaDoCodigo};
             
             Imprimir(empresas);
-
+            //altera a variável não afeta o valor do elemento do array!
             caelum = "Caelum Ensino e Inovação";
 
             Imprimir(empresas);
-
+            //mudando valor de um elemento do array
             empresas[1] = "Caelum Ensino e Inovação";
 
             Imprimir(empresas);
 
             System.Console.WriteLine("Primeiro elemento: " + empresas[0]);
             System.Console.WriteLine("Último elemento: " + empresas[empresas.Length - 1]);
+
+            //Localizando índice da primeira ocorrência no array
+            System.Console.WriteLine("O índice de Casa do Código é: " + Array.IndexOf(empresas, "Casa do Código"));
+
+            //Localizando índice da ultima ocorrência no 
+            System.Console.WriteLine("O último índice de Casa do Código é: " + Array.LastIndexOf(empresas, "Casa do Código"));
+
+            //Revertendo a sequencia do array
+            Array.Reverse(empresas);
+            Imprimir(empresas);
+
+            //Revertendonovamento a sequencia do array
+            Array.Reverse(empresas);
+            Imprimir(empresas);
+
+            Array.Resize(ref empresas, 2);
+            Imprimir(empresas);
         }
 
         private static void Imprimir(string[] empresas)
