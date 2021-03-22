@@ -85,11 +85,18 @@ namespace _02._01
 
         private static void Imprimir(string[] empresas)
         {
-            for (int i = 0; i < empresas.Length; i++)
+            // for (int i = 0; i < empresas.Length; i++)
+            // {
+            //     string empresa = empresas[i];
+            //     System.Console.WriteLine(empresa);
+            // }
+
+            foreach (var empresa in empresas)
             {
-                string empresa = empresas[i];
                 System.Console.WriteLine(empresa);
             }
+
+            System.Console.WriteLine();
         }
     }
 }
