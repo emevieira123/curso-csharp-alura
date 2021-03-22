@@ -55,8 +55,32 @@ namespace _02._01
             Array.Reverse(empresas);
             Imprimir(empresas);
 
+            //Redimensionando um array (truncando a última posição)
             Array.Resize(ref empresas, 2);
             Imprimir(empresas);
+
+            //Redimensionando um array (deixando a última posição vazia)
+            Array.Resize(ref empresas, 3);
+            Imprimir(empresas);
+
+            empresas[empresas.Length - 1] = "Casa do Código";
+
+            //Ordenando o Array pela ordem natural dos elementos (alfabéticos)
+            Array.Sort(empresas);
+            Imprimir(empresas);
+
+            //Copiando um array em outro
+            string[] copia = new string[2];
+            Array.Copy(empresas, 1, copia, 0, 2);
+            Imprimir(copia);
+
+            //Clonando um Array em um novo Array
+            string[] clone = empresas.Clone() as string[];
+            Imprimir(clone);
+
+            //Limpando alguns índices do Array
+            Array.Clear(clone, 1, clone.Length - 1);
+            Imprimir(clone);
         }
 
         private static void Imprimir(string[] empresas)
